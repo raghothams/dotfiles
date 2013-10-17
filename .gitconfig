@@ -4,12 +4,9 @@
 	ci = commit
 	co = checkout
 
-[core]
-	excludesfile = /Users/SKun/.gitignore
-
 [user]
-	name = Shrayas
-	email = shrayasr@gmail.com
+	name = Raghotham
+	email = raghotham.s@gmail.com
 
 [color]
 	branch = auto
