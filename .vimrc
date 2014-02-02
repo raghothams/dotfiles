@@ -1,111 +1,102 @@
-""""""""""""""""""""""""
-" Editing Settings
-""""""""""""""""""""""""
+filetype off
+call pathogen#infect()
 
-" Enable filetype plugin
-filetype plugin on
-filetype indent on
+set nocompatible
 
-" Filetypes and encoding
-set fileformats=unix,dos,mac
-set encoding=utf-8
+set backspace=indent,eol,start
+set autochdir
 
-" General behaviour
-set autochdir 			" cwd is same as file
-set ai 					" autoindent
-set nowrap 				" no wrapping
-set nocompatible 		" VIM instead of vi 
-set smartcase 			" smart case while searching
-set ignorecase 			" ignore casing
-set hlsearch			" highlight matches
-set incsearch 			" incremental serarch
-set history=500 		" long history
-set undolevels=1000     " setting undo levels
-
-" disable sounds
 set vb t_vb="
 set noerrorbells
+set novisualbell
 
-" tabbing, 2 spaces as tab
+set nowrap
+
+set smartcase
+set ignorecase
+set hlsearch
+set incsearch
+
+set history=500
+set undolevels=1000
+
+set fileformats=unix,mac,dos
+set encoding=utf-8
+filetype plugin indent on
+syntax on
+
+set si
+set ai
+
+set number
+
 set expandtab
 set smarttab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Filetype specific 
-au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+set splitright
+set splitbelow
 
+set showmatch
 
-""""""""""""""""""""""""
-" UI 
-""""""""""""""""""""""""
+set mousehide
 
-syntax on
+set linespace=0
 
-set showmatch 						" show matching braces
-set mousehide 						" hide mouse while typing
-set linespace=0 					" no extra pixel lines
-set lazyredraw 						" dont redraw wile running macro
-set wildmenu 						" wild menu
-set wildmode=longest,list,full 		" wild menu options
-set ruler 							" show current position
-set nobackup 						" dont create backup files
-set autoread 						" set to auto read when a file is changed from outside
-set hid 							" buffer becomes hidden when abandoned
-set magic 							" Regex magic
-set laststatus=2 					" status line magic
+set lazyredraw
 
-set statusline=%t\ %y\ [%c,%l]\ [%p%%\ of\ %L]\ %r%m
+set wildmenu
+set wildmode=longest,list,full
 
-""""""""""""""""""""""""
-" Plugins
-""""""""""""""""""""""""
+set ruler
 
-au BufNewFile,BufRead *.xsjs set filetype=js
+set nobackup
 
-" SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+set autoread
 
+set hid
 
-""""""""""""""""""""""""
-" Keymappings
-""""""""""""""""""""""""
+set magic
 
-" Create vertical split
-noremap <leader>v :vsp^N<cr> 		
+set laststatus=2
 
-" Create horizontal split
-noremap <leader>h :split^N<cr>
+set statusline=%t\ 
+set statusline+=%y\ 
+set statusline+=[%c,%l]\ 
+set statusline+=[%p%%\ of\ %L]\ 
+set statusline+=%r%m 
 
-" Edit vimrc
-map <leader>e :e! $MYVIMRC<cr>
+nnoremap <leader>ee :e $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>cc <esc>I# <esc>
+nnoremap <esc><esc> :nohlsearch<cr>
 
-" Remove highlights
-map <ESC><ESC> :nohlsearch<cr>
+nnoremap ; :
+nnoremap : <nop>
 
-" Map up and down to move visible lines instead of logical lines
-nmap j gj
-nmap k gk
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-" Alt-tab with buffers
-nmap <C-e> :e#<CR>
+vnoremap > >gv
+vnoremap < <gv
 
-" space and shift space map
-noremap <S-space> <C-b>
-noremap <space> <C-f>
+nnoremap <c-e> :e#<cr>
 
-" smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <space> <c-f>
+nnoremap <s-space> <c-b>
 
-" close buffer
-map <leader>q :bd<cr>
+nnoremap 0 ^
 
-" map 0 to first non blank character
-map 0 ^
+nnoremap <f5> :ls<cr>:b
 
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+augroup python_files
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
+
+" highlight 81st column
+highlight ColorColumn ctermbg=magenta
+set colorcolumn=81
+
