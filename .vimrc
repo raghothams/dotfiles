@@ -70,7 +70,6 @@ set statusline+=%r%m
 
 nnoremap <leader>ee :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>cc <esc>I# <esc>
 nnoremap <esc><esc> :nohlsearch<cr>
 
 nnoremap ; :
@@ -95,8 +94,4 @@ augroup python_files
   autocmd!
   autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
-
-" highlight 81st column
-highlight ColorColumn ctermbg=magenta
-set colorcolumn=81
 

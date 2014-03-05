@@ -1,8 +1,8 @@
-colorscheme distinguised
+colorscheme solarized
 
 set background=dark
 
-set guifont=Monaco:h13
+set guifont=DejaVu\ Sans\ Mono:h11
 
 set linespace=2
 
