@@ -68,6 +68,12 @@ set statusline+=[%c,%l]\
 set statusline+=[%p%%\ of\ %L]\ 
 set statusline+=%r%m 
 
+" Sane navigation with splits
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-[> <c-w>h
+nnoremap <c-]> <c-w>l
+
 nnoremap <leader>ee :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <esc><esc> :nohlsearch<cr>
@@ -94,4 +100,6 @@ augroup python_files
   autocmd!
   autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
+
+set colorcolumn=80
 
