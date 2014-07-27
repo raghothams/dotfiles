@@ -33,3 +33,14 @@ function nyan() {
 function md() {
   mkdir $1 && cd $1
 }
+
+function t() {
+
+  tmux new-session -d -s 'mux'
+  tmux split-window -h
+  tmux split-window -v
+  tmux select-pane -L
+  tmux new-window 'mutt'
+  tmux -2 attach-session -d
+}
+
