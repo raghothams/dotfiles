@@ -3,6 +3,7 @@
 	br = branch
 	ci = commit
 	co = checkout
+  lgg = log --graph --pretty=oneline --abbrev-commit
 
 [user]
 	name = Raghotham
