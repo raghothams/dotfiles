@@ -39,6 +39,8 @@ function parse_git_dirty() {
   elif [ $version_no = "9" ]
   then
     msg_to_check="nothing to commit, working directory clean"
+  else
+    msg_to_check="nothing to commit, working directory clean"
   fi
 
 	[[ $(git status 2> /dev/null | tail -n1) != $msg_to_check ]] && echo "*"
