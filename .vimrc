@@ -103,3 +103,14 @@ augroup END
 
 set colorcolumn=80
 
+" set relative numbering
+set relativenumber
+
+" force Gdiff to vertical split
+set diffopt+=vertical
+
+" remap CtrlN to CtrlSpace
+inoremap <C-Space> <C-n>
+
+" NERDTree 
+nnoremap <C-n> :NERDTreeToggle<CR>

@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/raghothams/.vim'
+let g:netrw_dirhist_2='/Users/raghothams/code/redmart-console/src/crm_module/CrmOrderDetails/directive/CrmOrderDetailsTab'
+let g:netrw_dirhist_3='/Users/raghothams/code/notification-service'
+let g:netrw_dirhist_4='/Users/raghothams/code/order-service'
+let g:netrw_dirhist_5='/Users/raghothams/code/redmart-console'
+let g:netrw_dirhist_6='/Users/raghothams/code/redmart-console/src/crm_module/CrmOrderDetails/partial/CrmCreditSumamry'
+let g:netrw_dirhist_7='/Users/raghothams/code/redmart-console/src/crm_module/CrmOrderDetails/partial/ItemAdjustment'
+let g:netrw_dirhist_8='/Users/raghothams/code/instamag/instamag/properties'
