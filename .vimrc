@@ -96,19 +96,6 @@ nnoremap 0 ^
 
 nnoremap <f5> :ls<cr>:b
 
-nnoremap <leader>v :vnew<cr>
-nnoremap <leader>h :new<cr>
-
-nnoremap <leader>q :bd<cr>
-
-nnoremap <C-b> :CtrlPBuffer<cr>
-
-nnoremap <leader>w :set wrap!<cr>
-nnoremap <leader>l :set spell!<cr>
-
-nnoremap j gj
-nnoremap k gk
-
 augroup python_files
   autocmd!
   autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
