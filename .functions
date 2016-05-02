@@ -62,3 +62,12 @@ function marks {
   ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
+function makeswap {
+  sudo fallocate -l $1"G" /swapfile
+  ls -lh /swapfile
+  sudo chmod 600 /swapfile
+  ls -lh /swapfile
+  sudo mkswap /swapfile
+  sudo swapon /swapfile
+  sudo swapon -s
+}
