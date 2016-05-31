@@ -15,6 +15,16 @@ function a()
       fi
 }
 
+function av()
+{
+  if [ -d "venv" ]
+    then
+      source venv/bin/activate
+  else
+    echo "Directory doesn't contain a virtualenv"
+      fi
+}
+
 cdf() {
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }

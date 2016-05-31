@@ -7,3 +7,15 @@ export LANG=en_US.UTF-8
 
 #export GNOM_CONFIG_FILEPATH="/Users/i065666/code/project-gnom/config/gnom_local.properties"
 
+
+#spark
+export PATH=$PATH:/home/init/spark-1.6.1-bin-hadoop2.6/bin
+#spark home
+export SPARK_HOME=/home/init/spark-1.6.1-bin-hadoop2.6
+#spark + py4j
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip
+#mongodb
+export PATH=$PATH:/home/init/pycharm-edu-2.0.3/bin
+
+# libpkg
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig/
