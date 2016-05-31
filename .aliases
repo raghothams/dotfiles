@@ -39,9 +39,6 @@ alias rm="rm -i"
 
 alias shs='python -m SimpleHTTPServer'
 
-# callhub
-alias callhubdb='ssh -fN -L 2222:localhost:5432 ubuntu@54.67.7.196 -i /home/init/.ssh/dbslave.pem'
-
 # virtualenv init
 alias venvinit='virtualenv env'
 
@@ -50,3 +47,4 @@ alias pbcopy='xsel --clipboard'
 
 # pbpaste
 alias pbpaste='xsel --clipboard'
+
