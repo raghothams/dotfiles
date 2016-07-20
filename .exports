@@ -9,13 +9,16 @@ export LANG=en_US.UTF-8
 
 
 #spark
-export PATH=$PATH:/home/init/spark-1.6.1-bin-hadoop2.6/bin
+export PATH=$PATH:/home/bilo/spark-1.6.2-bin-hadoop2.6/bin
 #spark home
-export SPARK_HOME=/home/init/spark-1.6.1-bin-hadoop2.6
+export SPARK_HOME=/home/bilo/spark-1.6.2-bin-hadoop2.6
 #spark + py4j
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip
 #mongodb
-export PATH=$PATH:/home/init/pycharm-edu-2.0.3/bin
+export PATH=$PATH:/home/bilo/pycharm-edu-2.0.3/bin
 
 # libpkg
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig/
+
+# anaconda
+export PATH=/home/bilo/anaconda2/bin:$PATH
