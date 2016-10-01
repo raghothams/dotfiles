@@ -1,5 +1,5 @@
-filetype off
-call pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -163,6 +163,7 @@ augroup python_files
 augroup END
 
 set colorcolumn=80
+color spacegray
 
 " set relative numbering
 set relativenumber
