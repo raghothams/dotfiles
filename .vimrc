@@ -175,3 +175,16 @@ inoremap <C-Space> <C-n>
 
 " NERDTree 
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "<img draggable="false" class="emoji" alt="⚠" src="https://s.w.org/images/core/emoji/2/svg/26a0.svg">"
+let g:syntastic_python_checkers = ['pylint']
+
